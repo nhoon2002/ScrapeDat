@@ -81,6 +81,7 @@ $(document).on("click", "#savenote", function() {
   // Also, remove the values entered in the input and textarea for note entry
   $("#titleinput").val("");
   $("#bodyinput").val("");
+  return false;
 });
 
 $(document).on("click", "#urlSubmit", function() {
@@ -95,8 +96,5 @@ $(document).on("click", "#urlSubmit", function() {
       location.reload();
 
    });
-
-
-
 
 });

@@ -32,7 +32,8 @@ app.use(bodyParser.urlencoded({
 app.use(express.static("public"));
 
 // Database configuration with mongoose
-mongoose.connect('mongodbheroku_vv993xg8da9r1sa8602uhpia7i43534mit@ds157559.mlab');
+mongoose.connect("mongodb://localhost/mongoosee");
+// mongoose.connect('mongodbheroku_vv993xg8da9r1sa8602uhpia7i43534mit@ds157559.mlab');
 var db = mongoose.connection;
 
 // Show any mongoose errors
@@ -100,7 +101,7 @@ app.get("/scrape/:subreddit", function(req, res) {
   setTimeout(function() {
 
      res.redirect("../index.html");
-  }, 2000);
+  }, 4000);
   // TODO: cases where user inputted an invalid or non-existing subreddit.
 });
 
@@ -172,5 +173,5 @@ app.post("/articles/:id", function(req, res) {
 
 // Listen on port 3000
 app.listen(port, function() {
-  console.log("App running on port 3000!");
+  console.log("App running on port!");
 });
