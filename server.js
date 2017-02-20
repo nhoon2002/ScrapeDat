@@ -97,7 +97,10 @@ app.get("/scrape/:subreddit", function(req, res) {
     });
   });
   // Tell the browser that we finished scraping the text
-  res.send("Scrape Complete");
+  res.send("Scrape success! Redirecting...");
+  setTimeout(function() {
+     res.redirect("../index.html");
+  }, 2000);
   // TODO: cases where user inputted an invalid or non-existing subreddit.
 });
 
