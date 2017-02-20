@@ -84,18 +84,15 @@ $(document).on("click", "#savenote", function() {
 });
 
 $(document).on("click", "#urlSubmit", function() {
-   var userUrl;
-   if ($("#userSubreddit").val().trim()) {
-      userUrl = $("#userSubreddit").val().trim();
-   } else {
-      userUrl = "";
-   }
+   var userUrl = $("#userSubreddit").val().trim();
+
    $.ajax({
       method: "GET",
       url: "/scrape/" + userUrl
 
    }).done(function(data) {
       console.log(data);
+      location.reload();
 
    });
 
