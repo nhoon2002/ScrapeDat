@@ -32,8 +32,8 @@ app.use(bodyParser.urlencoded({
 app.use(express.static("public"));
 
 // Database configuration with mongoose
-mongoose.connect("mongodb://localhost/mongoosee");
-// mongoose.connect('mongodbheroku_vv993xg8da9r1sa8602uhpia7i43534mit@ds157559.mlab');
+// mongoose.connect("mongodb://localhost/mongoosee");
+mongoose.connect('mongodbheroku_vv993xg8da9r1sa8602uhpia7i43534mit@ds157559.mlab');
 var db = mongoose.connection;
 
 // Show any mongoose errors
