@@ -1,5 +1,5 @@
 # ScrapeDat
-_This website was designed with the purpose of easing the reddit browsing experience.
+_Redditors, rejoice! This website was designed with the purpose of easing the reddit browsing experience.
 You can control which of your favorite subreddits to scrape off of._
 
 **Head to the demo [here](https://fast-coast-42676.herokuapp.com/)**
@@ -16,3 +16,8 @@ node server.js
 ```
 
 You should be able to run this project from _localhost:3000/_
+
+
+##This website has two main functions:
+###1) Scrape articles from any subreddit of your choice.
+###2) Add comments upon click on an article of your choice.
