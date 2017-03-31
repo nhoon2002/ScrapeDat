@@ -32,8 +32,16 @@ app.use(bodyParser.urlencoded({
 app.use(express.static("public"));
 
 // Database configuration with mongoose
-// mongoose.connect("mongodb://localhost/mongoosee");
-mongoose.connect('mongodbheroku_vv993xg8da9r1sa8602uhpia7i43534mit@ds157559.mlab');
+// ENTER YOUR DATABASE NAME IN PLACE of "mongoosee" HERE!
+var databaseURI = "mongodb://localhost/mongoosee";
+
+if (process.env.MONGODB_URI) {
+  mongoose.connect(process.env.MONGODB_URI);
+} else {
+  mongoose.connect(databaseURI);
+}
+
+// HEROKU JAWSDB mongoose.connect('mongodbheroku_vv993xg8da9r1sa8602uhpia7i43534mit@ds157559.mlab');
 var db = mongoose.connection;
 
 // Show any mongoose errors
