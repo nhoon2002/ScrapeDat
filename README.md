@@ -18,6 +18,6 @@ node server.js
 You should be able to run this project from _localhost:3000/_
 
 
-##This website has two main functions:
-###1) Scrape articles from any subreddit of your choice.
-###2) Add comments upon click on an article of your choice.
+## This website has two main functions:
+### 1) Scrape articles from any subreddit of your choice.
+### 2) Add comments upon click on an article of your choice.
